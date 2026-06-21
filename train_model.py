@@ -36,14 +36,14 @@ cat_features = [
 X_train, y_train, encoder, lb = process_data(
     train,
     categorical_features=cat_features,
-    label="census",
+    label="salary",
     training=True,
     )
 
 X_test, y_test, _, _ = process_data(
     test,
     categorical_features=cat_features,
-    label="census",
+    label="salary",
     training=False,
     encoder=encoder,
     lb=lb,
@@ -77,7 +77,7 @@ for col in cat_features:
             column_name=col,
             slice_value=slicevalue,
             categorical_features=cat_features,
-            label="census",
+            label="salary",
             encoder=encoder,
             lb=lb,
             model=model
