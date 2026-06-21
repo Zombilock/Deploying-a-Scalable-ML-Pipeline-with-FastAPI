@@ -1,5 +1,5 @@
 import pytest
-from ml.model import X_train, X_test
+from train_model import X_train, X_test
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from ml.model import train_model, compute_model_metrics
