@@ -77,7 +77,7 @@ for col in cat_features:
             column_name=col,
             slice_value=slicevalue,
             categorical_features=cat_features,
-            label="workclass",
+            label="occupation",
             encoder=encoder,
             lb=lb,
             model=model
