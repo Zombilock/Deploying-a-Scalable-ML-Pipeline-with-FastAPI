@@ -11,7 +11,10 @@ def data_shape_test():
     """
     # Ensures that the number of cols is correct between the training and test sets
     """
-    
+    train_shape = X_train.shape[1]
+    test_shape = X_test.shape[1]
+
+    assert train_shape == test_shape, f'Expected same number of columns in training and test sets, but got {train_shape} and {test_shape}'
     pass
 
 
