@@ -1,19 +1,18 @@
 import pytest
+from ml.model import X_train, X_test
 import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 from ml.model import train_model, compute_model_metrics
-import os
 
-from train_model import X_train
+
 
 # TODO: implement the first test. Change the function name and input as needed
 def data_shape_test():
     """
-    # Ensures that the number of rows is correct after processing the data
+    # Ensures that the number of cols is correct between the training and test sets
     """
-    data = X_train.shape[0]
+    assert X_train.shape[1] == X_test.shape[1], f'Expected same number of columns in training and test sets, but got {X_train.shape[1]} and {X_test.shape[1]}'
 
-    assert data == 15, f'Expected 15 rows, but got {data}'
     pass
 
 
