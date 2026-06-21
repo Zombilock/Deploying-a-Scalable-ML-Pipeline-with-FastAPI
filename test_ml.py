@@ -7,18 +7,16 @@ from ml.model import train_model, compute_model_metrics
 
 
 # TODO: implement the first test. Change the function name and input as needed
-def data_shape_test():
+def test_data_shape():
     """
     # Ensures that the number of cols is correct between the training and test sets
     """
-    train_shape = X_train.shape[1]
-    test_shape = X_test.shape[1]
-
-    assert train_shape == test_shape, f'Expected same number of columns in training and test sets, but got {train_shape} and {test_shape}'
+    
+    assert X_train.shape[1] == X_test.shape[1], f'Expected number of columns in training and test sets to be the same, but got {X_train.shape[1]} and {X_test.shape[1]} respectively'
 
 
 # TODO: implement the second test. Change the function name and input as needed
-def correct_model_test():
+def test_correct_model():
     """
     # Ensures that the model used is RandomForest
     """
@@ -28,10 +26,10 @@ def correct_model_test():
     model = train_model(X, y)
 
     assert isinstance(model, RandomForestClassifier), f'Expected model to be an instance of RandomForestClassifier, but got {type(model)}'
-
+    pass
 
 # TODO: implement the third test. Change the function name and input as needed
-def results_test():
+def test_results():
     """
     # Ensures that the model produces the expected results on the test set
     """
@@ -42,3 +40,4 @@ def results_test():
     assert precision is not None, 'Expected precision to be calculated, but got None'
     assert recall is not None, 'Expected recall to be calculated, but got None'
     assert fbeta is not None, 'Expected fbeta to be calculated, but got None'
+    pass
