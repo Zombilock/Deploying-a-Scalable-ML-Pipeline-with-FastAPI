@@ -15,7 +15,6 @@ def data_shape_test():
     test_shape = X_test.shape[1]
 
     assert train_shape == test_shape, f'Expected same number of columns in training and test sets, but got {train_shape} and {test_shape}'
-    pass
 
 
 # TODO: implement the second test. Change the function name and input as needed
@@ -29,7 +28,6 @@ def correct_model_test():
     model = train_model(X, y)
 
     assert isinstance(model, RandomForestClassifier), f'Expected model to be an instance of RandomForestClassifier, but got {type(model)}'
-    pass
 
 
 # TODO: implement the third test. Change the function name and input as needed
@@ -44,4 +42,3 @@ def results_test():
     assert precision is not None, 'Expected precision to be calculated, but got None'
     assert recall is not None, 'Expected recall to be calculated, but got None'
     assert fbeta is not None, 'Expected fbeta to be calculated, but got None'
-    pass
